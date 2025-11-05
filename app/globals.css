@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.light body {
+  @apply bg-background-light text-foreground-light;
+}
+
+/* Typography */
+.h1 {
+  @apply text-4xl md:text-6xl font-semibold tracking-tight;
+}
+.h2 {
+  @apply text-2xl md:text-3xl font-semibold tracking-tight;
+}
+.muted {
+  @apply text-sm text-accent;
+}
+
+/* Controls */
+.input {
+  @apply w-full rounded-xl border border-neutral-800 bg-neutral-950/60 px-5 py-4 text-neutral-200 placeholder:text-neutral-500 outline-none transition focus:border-neutral-600 focus:ring-2 focus:ring-neutral-700 dark:bg-neutral-900/70 dark:border-neutral-800 dark:focus:border-neutral-600;
+}
+.button {
+  @apply inline-flex items-center justify-center rounded-xl border border-neutral-800 bg-neutral-950/60 px-4 py-2 text-sm text-neutral-200 hover:bg-neutral-900 transition active:scale-[0.99] dark:bg-neutral-900/70;
+}
+
+.container-default {
+  @apply max-w-6xl mx-auto px-4 sm:px-6;
+}
